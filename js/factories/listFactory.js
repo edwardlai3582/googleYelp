@@ -12,7 +12,7 @@ app.factory('listF', ['$http',function($http){
         o.dest["latlng"] = [];
         o.dest["latlng"].push(lat);
         o.dest["latlng"].push(lng);
-        return $http.json('https://edwardlai3582.com/vinylyelp?term='+term+'&lat='+lat+'&lng='+lng+'&callback=JSON_CALLBACK');
+        return $http.jsonp('https://edwardlai3582.com/yelp?term='+term+'&lat='+lat+'&lng='+lng+'&callback=JSON_CALLBACK');
     };
 
     return o;
